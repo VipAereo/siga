@@ -81,7 +81,7 @@ $router->post('/actualizar/programa', [ProgramasController::class, 'actualizar']
 $router->get('/progroles', [ProgRoleController::class, 'programarol']);
 $router->get('/allProgramas/roles', [ProgRoleController::class, 'allProgramRole']);
 $router->post('/progRole/relaciones', [ProgRoleController::class, 'programRoleRelacion']);
-$router->post('/crear/progroles', [ProgRoleController::class, 'crearProgRoles']);
+$router->post('/crear/progroles', [ProgRoleController::class, 'crearprogroles']);
 $router->post('/eliminar/progRoles', [ProgRoleController::class, 'eliminarProgRoles']);
 
 /* RELACION PROGRAMAS & USUARIOS */

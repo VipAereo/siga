@@ -18,7 +18,7 @@ class ProgRoleController
         }
 
         // Verifica que tenga permisos
-        if (ActiveRecord::hasPermission('progRoles')) {
+        if (ActiveRecord::hasPermission('progroles')) {
             header('Location: /dashboard');
             exit;
         }
@@ -36,7 +36,7 @@ class ProgRoleController
         }
 
         // Verifica que tenga permisos
-        if (ActiveRecord::hasPermission('progRoles')) {
+        if (ActiveRecord::hasPermission('progroles')) {
             header('Location: /dashboard');
             exit;
         }
@@ -58,7 +58,7 @@ class ProgRoleController
         }
 
         // Verifica que tenga permisos
-        if (ActiveRecord::hasPermission('progRoles')) {
+        if (ActiveRecord::hasPermission('progroles')) {
             header('Location: /dashboard');
             exit;
         }
@@ -80,7 +80,7 @@ class ProgRoleController
             $rol_id = filter_var($rol_id, FILTER_VALIDATE_INT);
 
             if (!$rol_id) {
-                header('Location: /progRoles');
+                header('Location: /progroles');
             }
 
             // Obtener Usuario a Editar
@@ -134,7 +134,7 @@ class ProgRoleController
         echo json_encode($array3);
     }
 
-    public static function crearProgRoles(Router $router)
+    public static function crearprogroles(Router $router)
     {
         // proteger vista 
         if (!isAuth()) {
@@ -144,7 +144,6 @@ class ProgRoleController
         // Verifica que tenga permisos
         if (ActiveRecord::hasPermission('progroles')) {
             header('Location: /dashboard');
-            exit;
         }
 
         $alertas = [];
@@ -192,7 +191,7 @@ class ProgRoleController
         }
 
         // Verifica que tenga permisos
-        if (ActiveRecord::hasPermission('progRoles')) {
+        if (ActiveRecord::hasPermission('progroles')) {
             header('Location: /dashboard');
             exit;
         }
