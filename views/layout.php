@@ -57,6 +57,7 @@
     // Utilizar el Layout de acuerdo a la URL
     $url_actual = $_SERVER['PATH_INFO'] ?? '/';
 
+    debuguear($url_actual);
     if ($url_actual != '/login') include_once __DIR__ . '/templates/header.php';
 
     ?>
