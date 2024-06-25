@@ -43,7 +43,7 @@ window.addEventListener('resize', function () {
 });
 
 async function iniciarApp() {
-    await obtenerDatos();
+    // await obtenerDatos();
     await tabs(); 
 }
 
