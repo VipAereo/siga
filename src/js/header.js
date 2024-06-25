@@ -5,6 +5,7 @@ let rutaServer;
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    alert('si')
     iniciarApp();
     eventos();
 });

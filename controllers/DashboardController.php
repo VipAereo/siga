@@ -15,11 +15,8 @@ class DashboardController
         }
 
         $userId = $_SESSION['id'];
-        debuguear($userId);
-        if ($userId) {
-            $usuarios = MegaMenu::traerMenu($userId);
-            echo json_encode($usuarios);
-        }
+        $usuarios = MegaMenu::traerMenu($userId);
+        echo json_encode($usuarios);
     }
 
     public static function ruta()
