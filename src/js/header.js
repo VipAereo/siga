@@ -7,7 +7,7 @@ let rutaServer;
 document.addEventListener('DOMContentLoaded', function () {
     iniciarApp();
     eventos();
-});
+}); 
 
 function eventos() {
 
