@@ -15,7 +15,6 @@ class AuthController
         // si ya inicio sesion
         if (isAuth()) {
             header('Location: /login');
-            exit;
         }
 
         // validar que tenga permiso en la ruta actual
@@ -137,7 +136,6 @@ class AuthController
         // proteger vista 
         if (!isAuth()) {
             header('Location: /login');
-            exit;
         }
 
         $router->render('admin/dashboard/index', [

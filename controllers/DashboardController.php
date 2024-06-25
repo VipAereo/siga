@@ -13,7 +13,6 @@ class DashboardController
         // proteger vista 
         if (!isAuth()) {
             header('Location: /login');
-            exit;
         }
 
         $userId = $_SESSION['id'];
