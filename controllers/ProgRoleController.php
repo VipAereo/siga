@@ -164,6 +164,7 @@ class ProgRoleController
                 $condiciones = ["rol_id = $program->rol_id "];
                 $existeRelacion = ProgramRole::where('programa_id', $program->programa_id, $condiciones);
 
+                debuguear($existeRelacion);
                 if ($existeRelacion) {
                     Rol::setAlerta('error', 'La Relación' . $existeRelacion[0]->rpr_id . ' ya existe.');
                     $alertas = Rol::getAlertas();
