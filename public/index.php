@@ -78,7 +78,7 @@ $router->post('/crear/programa', [ProgramasController::class, 'crear']);
 $router->post('/actualizar/programa', [ProgramasController::class, 'actualizar']);
 
 /* RELACION PROGRAMAS & ROLES */
-$router->get('/progRoles', [ProgRoleController::class, 'programaRol']);
+$router->get('/progroles', [ProgRoleController::class, 'programarol']);
 $router->get('/allProgramas/roles', [ProgRoleController::class, 'allProgramRole']);
 $router->post('/progRole/relaciones', [ProgRoleController::class, 'programRoleRelacion']);
 $router->post('/crear/progRoles', [ProgRoleController::class, 'crearProgRoles']);

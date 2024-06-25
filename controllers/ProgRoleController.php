@@ -10,7 +10,7 @@ use Model\Rol;
 
 class ProgRoleController
 {
-    public static function programaRol(Router $router)
+    public static function programarol(Router $router)
     {
 
         if (!isAuth()) {
@@ -142,7 +142,7 @@ class ProgRoleController
         }
 
         // Verifica que tenga permisos
-        if (ActiveRecord::hasPermission('progRoles')) {
+        if (ActiveRecord::hasPermission('progroles')) {
             header('Location: /dashboard');
             exit;
         }
