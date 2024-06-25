@@ -4,7 +4,7 @@ namespace Controllers;
 
 use Model\MegaMenu;
 
-class DashboardController 
+class DashboardController
 {
 
     public static function obtenerMenu()
@@ -13,18 +13,20 @@ class DashboardController
         if (!isAuth()) {
             header('Location: /login');
         }
+
         $userId = $_SESSION['id'];
-        if($userId){
+        debuguear($userId);
+        if ($userId) {
             $usuarios = MegaMenu::traerMenu($userId);
             echo json_encode($usuarios);
         }
     }
 
-    public static function ruta(){
+    public static function ruta()
+    {
         if (!isAuth()) {
             header('Location: /login');
         }
         echo json_encode($_ENV['HOST']);
     }
-
 }

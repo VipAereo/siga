@@ -47,7 +47,6 @@ async function iniciarApp() {
     await tabs(); 
 }
 
-
 async function obtenerDatos() {
 
     // obtener datos de la BD 
