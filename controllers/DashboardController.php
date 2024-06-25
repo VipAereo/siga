@@ -9,12 +9,14 @@ class DashboardController
 
     public static function obtenerMenu()
     {
-        debuguear($_SESSION);
 
         // proteger vista 
         if (!isAuth()) {
+            var_dump('no auth');
             header('Location: /login');
+            exit;
         }
+        var_dump('si auth');
 
 
         $userId = $_SESSION['id'];
