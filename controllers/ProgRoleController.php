@@ -164,7 +164,6 @@ class ProgRoleController
                 $condiciones = ["rol_id = $program->rol_id "];
                 $existeRelacion = ProgramRole::where('programa_id', $program->programa_id, $condiciones);
 
-                debuguear($existeRelacion);
                 if ($existeRelacion) {
                     Rol::setAlerta('error', 'La Relación' . $existeRelacion[0]->rpr_id . ' ya existe.');
                     $alertas = Rol::getAlertas();
@@ -172,6 +171,9 @@ class ProgRoleController
                 }
                 if (empty($alertas)) {
                     $resultado =  $program->guardar();
+                    var_dump($program);
+                    debuguear($resultado);
+
                     if ($resultado['error']) {
                         $respuesta['exito'] = $exito = 0;
                         $respuesta['errorSMS'] = $resultado['error'];
