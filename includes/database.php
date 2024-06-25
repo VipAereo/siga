@@ -32,7 +32,7 @@ function conectarDB(): PDO
 try {
     $pdo = conectarDB();
     // echo "éxito";
-    debuguear('exito');
+    //debuguear('exito');
     // Puedes realizar consultas u operaciones con $pdo aquí
 } catch (PDOException $e) {
     // Manejo de errores de conexión
