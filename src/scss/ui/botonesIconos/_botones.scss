@@ -1,0 +1,190 @@
+@use 'base/variables' as v;
+
+.cont-btn {
+    display: flex;
+    gap: 3rem;
+}
+
+.btn {
+    color: v.$blanco;
+    padding: 8px 2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &-guardar {
+        background-color: v.$azul-claro;
+
+        &:hover {
+            background-color: darken(v.$azul-claro, 10%);
+            box-shadow: 0 0 0 3px lighten(v.$azul-claro, 20%);
+        }
+
+        &:active {
+            background-color: darken(v.$azul-claro, 20%);
+            transform: scale(0.97);
+        }
+    }
+
+    &-guardar2 {
+        background-color: #28a745;
+
+        &:hover {
+            background-color: darken(#28a745, 5%);
+            box-shadow: 0 0 0 3px #28a74580
+        }
+
+        &:active {
+            background-color: #218838;
+            transform: scale(0.97);
+        }
+    }
+
+    &-cancelar {
+        background-color: v.$rojo-fuerte;
+
+        &:hover {
+            background-color: darken(v.$rojo-fuerte, 5%);
+            box-shadow: 0 0 0 3px lighten(v.$rojo-fuerte, 30%);
+        }
+
+        &:active {
+            background-color: darken(v.$rojo-fuerte, 10%);
+            transform: scale(0.97);
+        }
+    }
+
+    &-editar {
+        &::before {
+            color: v.$azul-oscuro;
+        }
+    }
+
+    &-eliminar {
+        &::before {
+            color: v.$rojo-fuerte;
+        }
+    }
+
+    &-atras {
+        background-color: v.$blanco;
+        border: 1px solid v.$rojo-fuerte;
+        color: v.$rojo-fuerte;
+
+        &:hover {
+            box-shadow: 0 0 0 3px lighten(v.$rojo-fuerte, 40%);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    &-prev {
+        background-color: v.$blanco;
+        color: v.$azul-claro;
+
+        &::before {
+            content: ' \f060';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 14px;
+            color: v.$azul-claro;
+            margin-right: 10px;
+        }
+    }
+
+    &-next {
+        background-color: v.$azul-claro;
+
+        &::after {
+            content: ' \f061';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 14px;
+            color: v.$blanco;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: darken(v.$azul-claro, 10%);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    &-login {
+        border: none;
+        padding: 8px 4rem;
+        background: linear-gradient(45deg, #54c5f8, #01579b);
+        color: #fff;
+        font-weight: 900;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:active {
+            background: linear-gradient(145deg, #54c5f8, #01579b);
+        }
+    }
+
+    &-mas,
+    &-pasajero {
+
+        background-color: transparent;
+        color: #01579b;
+
+        &::before {
+            content: '\2b';
+            margin-right: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 14px;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+    }
+
+    &-eliminarRuta {
+        background-color: transparent;
+        color: v.$rojo-fuerte;
+        padding: 5px 0 0 5px;
+    }
+
+    &-eliminarPax {
+
+        position: absolute;
+        right: 0;
+        height: -webkit-fill-available;
+        padding: 0;
+        margin: 0;
+        align-content: center;
+        text-align: center;
+        width: 3rem;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+        background-color: v.$rojo-fuerte;
+
+        &::after {
+            content: ' \f2ed';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 14px;
+            color: v.$blanco;
+        }
+
+        &:hover {
+            background-color: darken(v.$rojo-fuerte, 10);
+        }
+
+        &:active a {
+            transform: scale(.8);
+        }
+    }
+}

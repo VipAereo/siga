@@ -1,0 +1,1 @@
+{"version":3,"sources":["page/catalogos/aeropuerto.scss","page/catalogos/aeropuerto.css"],"names":[],"mappings":"AAAA,oBACI,eCCJ","file":"aeropuerto.css","sourcesContent":[".form-consesionario{\r\n    grid-column: 1/3;\r\n}",".form-consesionario {\n  grid-column: 1/3;\n}"]}

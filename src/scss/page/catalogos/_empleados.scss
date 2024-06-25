@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.altas_secciones {
+
+    section, .mostrar {
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .dropzone {
+        grid-column: 1/3;
+        border: 4px dashed v.$color-line;
+    }
+
+    .empleado_formP1 {
+        @include m.grid(3, 2rem);
+        margin: 2rem 0;
+        div:first-child {
+            grid-column: 1/3;
+        }
+    }
+
+    .empleado_formP2 {
+        @include m.grid(3, 2rem);
+        margin: 2rem 0;
+    }
+
+    .empleado_formP3 {
+        @include m.grid(2, 2rem);
+        margin: 2rem 0;
+    }
+
+    .empleado-form1C{
+        @include m.grid(2, 2rem);
+        margin: 2rem 0;
+    }
+    .empleado-form2C{
+        @include m.grid(2, 2rem);
+        margin: 2rem 0;
+    }
+    .empleado-form3C{
+        @include m.grid(3, 2rem);
+        margin: 2rem 0;
+    }
+
+    .empleado-form13C{
+        @include m.grid(3, 2rem);
+        margin: 2rem 0;
+
+        .empleado_form-depa{
+            grid-column: 1/3;
+        }
+        
+    }
+
+}
+
+.empleado_botones {
+    @include m.grid(4, 1rem);
+    margin: 1.5rem 0;
+}

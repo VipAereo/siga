@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+
+.arrow-up::before {
+    content: '\f077';
+    /* Icono hacia arriba */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    color: v.$blanco;
+}
+
+.arrow-down::before {
+    content: '\f078';
+    /* Icono hacia abajo */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    color: v.$blanco;
+}
+
+.circle-check::before {
+    content: '\f058';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    color: v.$boton-verde;
+}
+
+
+// Icono File
+.thumbnail {
+
+    height: 2rem;
+    min-height: -webkit-fill-available;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    color: v.$azul-oscuro;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    .fileicon {
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .filename {
+
+        p {
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+    }
+
+}

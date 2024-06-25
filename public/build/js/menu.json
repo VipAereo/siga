@@ -1,0 +1,16 @@
+[
+    {
+        "MenuId": 1,
+        "Nombre": "Contabilidad",
+        "PadreId": null,
+        "Nivel": 1,
+        "Ruta": ""
+    },
+    {
+        "MenuId": 2,
+        "Nombre": "Ventas",
+        "PadreId":1,
+        "Nivel": 2,
+        "Ruta": ""
+    }
+]

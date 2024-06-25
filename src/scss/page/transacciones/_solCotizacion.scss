@@ -1,0 +1,218 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.solCotizacion {
+
+    .form-dsg {
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+
+    .in-solCot-aero {
+        grid-column: 2/4;
+    }
+
+    .nav-destinos {
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                color: v.$boton-azul;
+            }
+
+            &:active {
+                color: darken(v.$boton-azul, 15%);
+            }
+
+        }
+    }
+
+    textarea {
+        max-width: 100%;
+        max-height: 6rem;
+        min-width: 100%;
+    }
+
+    .nuevaRuta {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .flex-titulo {
+        justify-content: space-between;
+    }
+
+    .cont-form3,
+    .cont-form4 {
+
+        .form-group {
+
+            input,
+            select {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            label {
+                font-size: 12px;
+            }
+        }
+    }
+
+
+}
+
+
+.rutas {
+
+    #dest1,
+    #dest2,
+    #dest3 {
+        width: 100%;
+    }
+
+    .ruta-origen {
+        position: relative;
+        align-items: center;
+        // height: 3.5rem;
+    }
+
+    .hr_separador {
+        border-radius: 10px;
+        border: 2px solid #dbdbdb;
+    }
+
+    .errorRuta {
+        border: 2px solid #ff0005;
+        box-shadow: 0 0 12px 2px rgba(255, 0, 5, .141);
+    }
+
+    .containerSearch {
+        border-radius: 10px;
+        top: 36px;
+        width: 47%;
+        left: initial;
+        right: initial;
+
+        option {
+            border-radius: 5px;
+        }
+    }
+
+    .vuelo-titulo {
+        padding: 0 5px 0 3.8rem;
+
+        .containerSearch {
+            left: initial;
+            right: initial;
+        }
+    }
+
+    .vuelo-icon {
+        position: absolute;
+        top: 10px;
+        margin-left: 10px;
+
+        &::after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            position: absolute;
+            top: 0px;
+            left: 30px;
+            background-color: v.$color-line;
+        }
+    }
+
+    .separador-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        border: 1px solid;
+        color: v.$color-line;
+    }
+
+
+    form .ruta-origen select {
+        border: none;
+        box-shadow: none;
+    }
+
+
+    .rt-fecha {
+        flex: 2;
+    }
+
+    .rt-pax {
+        flex: 1;
+    }
+
+    .rt-hora{
+        flex: 1;
+    }
+}
+
+.toggle-pax:hover,
+.toggle-relRuta {
+    cursor: pointer;
+}
+
+
+/* Estilos para el contenedor y la animación */
+.toggle-pax-cont,
+.toggle-relRuta-cont {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+/* Cuando el contenedor está expandido */
+.toggle-pax-cont.expanded,
+.toggle-relRuta-cont.expanded {
+    max-height: 1000px;
+    /* Ajusta según el contenido */
+    opacity: 1;
+}
+
+/* Estilos para la flecha */
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    vertical-align: middle;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #000;
+    transition: transform 0.3s ease;
+}
+
+/* Flecha rotada cuando está expandido */
+.toggle-pax.expanded .arrow,
+.toggle-relRuta.expanded .arrow {
+    transform: rotate(180deg);
+}
+
+#formPasajeros {
+    .btn-pasajero {
+        padding-left: 0;
+    }
+}
+
+.heightAuto {
+
+    #myGrid2 {
+        height: 100% !important;
+    }
+
+    .ag-root-wrapper-body.ag-layout-normal {
+        height: 100% !important;
+    }
+}

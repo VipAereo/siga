@@ -1,0 +1,209 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.costear {
+
+    .form-dsg {
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+
+    .cont-form3,
+    .cont-form4 {
+        gap: 22px 30px;
+
+        .form-group {
+
+            input,
+            select {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            textarea {
+                // line-height: 0.8;
+                max-width: 100%;
+                max-height: 6rem;
+                min-width: 100%;
+                resize: none;
+            }
+
+            label {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .flex-titulo {
+        justify-content: space-between;
+    }
+}
+
+.grid-altas {
+    #myGrid2 {
+        padding: 0 3rem;
+    }
+
+    padding-bottom: 0;
+}
+
+#formTotales {
+
+    .cont-form3 {
+        margin: 0;
+    }
+
+    .totales_cont {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px 0;
+
+        input,
+        select {
+            width: 16rem;
+            border: none;
+            padding: 0;
+            text-align: right;
+            appearance: none;
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        .tipoCambio {
+            position: relative;
+            left: 150px;
+            z-index: 1;
+            padding: 0px 10px;
+            background-color: #d8d8d8;
+            cursor: pointer;
+
+            i {
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: rotate(180deg);
+                }
+            }
+
+        }
+
+        .tipoCambio:active {
+            background-color: rgb(226, 226, 226);
+        }
+
+    }
+
+    .totales_comment {
+
+        textarea {
+            max-width: 28rem;
+            min-width: 28rem;
+            max-height: 6rem;
+        }
+    }
+
+    .cant-total {
+        label,
+        input {
+            // font-size: 18px;
+            // color: v.$azul-oscuro;
+            font-weight: bold;
+        }
+    }
+}
+
+.costeo-pasajeros {
+
+    .addPax {
+        width: 20%;
+    }
+}
+
+
+
+
+
+
+
+.toggle-pax:hover,
+.toggle-relRuta {
+    cursor: pointer;
+}
+
+/* Estilos para el contenedor y la animación */
+.toggle-pax-cont,
+.toggle-relRuta-cont {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+/* Cuando el contenedor está expandido */
+.toggle-pax-cont.expanded,
+.toggle-relRuta-cont.expanded {
+    max-height: 1000px;
+    /* Ajusta según el contenido */
+    opacity: 1;
+}
+
+/* Estilos para la flecha */
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    vertical-align: middle;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #000;
+    transition: transform 0.3s ease;
+}
+
+/* Flecha rotada cuando está expandido */
+.toggle-pax.expanded .arrow,
+.toggle-relRuta.expanded .arrow {
+    transform: rotate(180deg);
+}
+
+#formPasajeros {
+    .btn-pasajero {
+        padding-left: 0;
+    }
+}
+
+.heightAuto {
+
+    #myGrid2 {
+        height: 100% !important;
+    }
+
+    .ag-root-wrapper-body.ag-layout-normal {
+        height: 100% !important;
+    }
+}
+
+#formRelRuta {
+    .rel-ruta {
+        color: v.$azul-oscuro;
+        font-weight: bold;
+
+        p {
+            color: #5e5e5e;
+            font-weight: 400;
+            padding-left: 2rem;
+        }
+    }
+
+    select {
+        margin-top: 1rem;
+        padding: 0;
+        width: 15rem;
+        margin-left: 2rem;
+    }
+
+
+}

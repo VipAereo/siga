@@ -1,0 +1,177 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@include m.tablet {
+    .app {
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+.quickFilterContent {
+    .form-dsg {
+        margin: 2rem 0 1rem 2rem;
+        flex-direction: row;
+        justify-items: left;
+
+        input {
+            width: 40rem;
+        }
+    }
+}
+
+.grid-user,
+.grid-progRole,
+.grid-altas {
+    padding-bottom: 3rem;
+
+    #myGrid,
+    #myGrid2 {
+        height: 30rem;
+        padding: 0 2rem;
+
+        .ag-header-row {
+            background-color: v.$color-nav;
+            color: v.$blanco;
+        }
+
+        .ag-icon {
+            color: v.$blanco;
+        }
+
+        .ag-paging-panel span {
+            color: v.$color-nav;
+        }
+    }
+}
+
+// Formulario Crear Usuario
+.crear-usuario {
+
+    .user-contenedor {
+
+        .form-dsg {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 2rem;
+            justify-items: center;
+
+            .form-group {
+                width: 22rem;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+.contenedor-altas {
+    animation-name: opacityAnimate;
+    animation-duration: .5s;
+    position: fixed;
+    inset: 0;
+    overflow-y: auto;
+    background-color: #00050c99;
+    padding-top: 6rem;
+    z-index: 2;
+
+    @include m.telefono {
+        min-width: fit-content;
+    }
+
+    .flex-titulo {
+        justify-content: center
+    }
+
+    .cont-form {
+        width: auto;
+        @include m.grid(2, 1rem);
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .cont-form1 {
+        @include m.grid(1, 2rem);
+        margin: 2rem 0;
+    }
+
+    .cont-form2 {
+        @include m.grid(2, 2rem);
+        margin: 2rem 0;
+    }
+
+    .cont-form3 {
+        @include m.grid(3, 2rem);
+        margin: 2rem 0;
+    }
+
+    .cont-form4 {
+        @include m.grid(4, 2rem);
+        margin: 2rem 0;
+    }
+
+    .dropzone {
+        padding: 0;
+    }
+}
+
+@keyframes opacityAnimate {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.altas_pasos {
+    min-height: 42rem;
+    box-shadow: 1px 0px 18px 0 rgb(96 120 130 / 49%), 0 3px 1px -2px rgba(4, 59, 161, 0.12), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    flex-direction: column;
+
+    p {
+        padding: 2rem 1rem 2rem 4rem;
+    }
+
+    .circle-check::before {
+        margin-right: 1rem;
+    }
+}
+
+.altas_secciones {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6rem;
+
+    section {
+        h3 {
+            color: v.$azul-oscuro
+        }
+    }
+}
+
+.pasoActivo {
+    color: v.$azul-oscuro;
+    font-weight: v.$bold;
+
+    &::before {
+        content: '\f192';
+        font-family: 'Font Awesome 5 Free';
+        color: v.$azul-oscuro;
+        margin-right: 1rem;
+    }
+}
+
+.flex-titulo {
+    a {
+        padding: 0 2rem;
+    }
+
+    i {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,66 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+/* el tamaño de fuente base en 100% es una técnica válida para simplificar los cálculos y mantener el diseño consistente. */
+/* evita que los elementos se desborden debido a los bordes y el padding añadidos. */
+html {
+    font-size: 80%;
+    box-sizing: border-box;
+}
+
+/* Garantiza una coherencia en la forma en que se calculan y se aplican los tamaños de los elementos y sus componentes (contenido, padding y borde) en toda la página */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuente-principal;
+    font-size: 1.2rem;
+    background-color: v.$color-principal;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+// a:hover{
+//     color: var(--clr_secundario);
+// }
+
+li {
+    list-style: none;
+}
+
+// img {
+//     width: 100%;
+//     height: auto;
+// }

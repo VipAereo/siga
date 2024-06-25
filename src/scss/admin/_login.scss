@@ -1,0 +1,101 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cont-login {
+    border-radius: 2rem;
+
+    .login {
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    .form-dsg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 3rem;
+    }
+}
+
+.login {
+    background: rgba(182, 142, 255, 0.199);
+    background-image: linear-gradient(180deg, rgba(178, 214, 233, 0.459) 15%, rgba(62, 87, 155, 0.473) 92%), url(../img/jet.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+
+    p {
+        background-color: v.$blanco;
+        color: v.$azul-oscuro;
+        font-weight: v.$bold;
+        padding: 1rem;
+        border-radius: 15px 0 0 15px;
+    }
+
+   
+} 
+
+.login__titulo {
+    letter-spacing: 3px;
+    font-size: 3rem;
+    color: v.$azul-oscuro;
+    font-weight: v.$black;
+
+    span {
+        color: v.$azul-claro;
+    }
+}
+
+.cont-login {
+    @include m.telefono {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .col-7 {
+            width: 100%;
+        }
+
+        .login {
+            display: none;
+        }
+    }
+
+    // Columnas del Login
+    & div {
+        grid-column: 1/3;
+    }
+
+    & .form-dsg {
+        & .form-group {
+            width: 16rem;
+        }
+    }
+
+    .cont-form1{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
+
+
+// Errores
+.errorInput{
+    &::after{
+        content: 'Ingresa un valor valido.';
+        color: #9e1212;
+        padding: 0 10px 5px 10px;
+    }
+}
+
+
+// DASHBOARD
+.dash{
+    background-image: url('../img/dash.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}

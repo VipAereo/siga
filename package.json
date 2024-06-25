@@ -1,0 +1,32 @@
+{
+  "name": "proyectosiga",
+  "version": "1.0.0",
+  "description": "Proyecto SIGA, MVC y Active Record.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp",
+    "Composer"
+  ],
+  "author": "Cesar LN",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.3",
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.4.33",
+    "sass": "^1.69.7",
+    "terser": "^5.26.0"
+  }
+}

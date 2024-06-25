@@ -1,0 +1,109 @@
+@use 'base/variables' as v;
+
+// listaSearch
+.containerSearch {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 2px solid #dbdbdb;
+    border-right: 2px solid #dbdbdb;
+    border-bottom: 2px solid #dbdbdb;
+    height: min-content;
+    z-index: 1;
+    background-color: #fff;
+
+    option {
+        background-color: #fff;
+
+        &:hover {
+            background-color: v.$azul-claro;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .listOption {
+        background-color: v.$azul-claro;
+        color: #fff;
+    }
+
+    input {
+        height: 25px;
+        border-radius: inherit;
+        border: none;
+        color: darken(v.$color-line, 25%);
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+        margin-bottom: 5px;
+
+
+        &:focus {
+            box-shadow: unset;
+        }
+
+    }
+
+    i {
+        position: absolute;
+        top: 6px;
+        right: 8px;
+    }
+}
+
+#filtro {
+
+    box-shadow: 0 2px 2px 0 rgba(120, 217, 255, 0.486), 0 3px 1px -2px rgba(4, 59, 161, 0.12), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    width: 15%;
+
+    &_search {
+        height: 25px;
+        border-radius: inherit;
+        border: none;
+        color: darken(v.$color-line, 25%);
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+        margin-bottom: 5px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    i {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+
+    &_list {
+
+        ul {
+            margin: 0rem;
+            padding: 0rem;
+
+            option {
+                padding-left: 1rem;
+
+                &:hover {
+                    background-color: v.$azul-claro;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .listOption {
+            background-color: v.$azul-claro;
+            color: #fff;
+        }
+    }
+}
+
+.listOption {
+    background-color: v.$azul-claro;
+    color: #fff;
+}

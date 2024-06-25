@@ -1,0 +1,24 @@
+.input-empr-colonia {
+    grid-column: 1/3;
+}
+
+.input-empr-comision {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 10px;
+
+    input {
+        width: auto;
+    }
+}
+
+.cont-form3 {
+
+    .input-empr-desc {
+        grid-column: 2/4;
+        input{
+            text-align: right;
+        }
+    }
+}

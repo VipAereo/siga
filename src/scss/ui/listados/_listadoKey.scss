@@ -1,0 +1,76 @@
+@use 'base/variables' as v;
+
+#listKey {
+
+    .contenedorKey {
+        background-color: #00000054;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .flex-titulo {
+            background-color: darken(v.$azul-oscuro, 15%);
+            // background-color: v.$color-nav;
+            padding-left: 0;
+            padding-right: 0;
+
+            h3 {
+                padding-left: 1rem;
+            }
+
+            .cerrar-tablakey {
+                font-size: 2rem;
+                margin-right: 1rem;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 1s;
+                    transform: rotate(0.26turn);
+                    color: #ff4f4f;
+                }
+            }
+        }
+
+
+    }
+
+    #tableKey_wrapper {
+        background-color: rgb(255, 255, 255);
+        padding: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        .dt-layout-row {
+
+            input,
+            select {
+                width: auto;
+            }
+        }
+
+        .dt-layout-table {
+            min-height: 350px;
+        }
+    }
+
+}
+
+#listKey {
+    .dt-scroll-head {
+        .dt-scroll-headInner {
+            width: 100% !important;
+
+            .dataTable {
+                width: 100% !important;
+            }
+        }
+    }
+}
+

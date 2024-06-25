@@ -1,0 +1,99 @@
+@use 'base/variables' as v;
+
+input {
+    outline: none;
+    padding: 8px;
+    border-radius: 10px;
+    // border: none;
+    border: 2px solid rgb(219, 219, 219);
+    // background: #9dd3ff69;
+    background: v.$blanco;
+    width: 100%;
+
+    &:focus {
+        border: 2px solid #2593ea;
+        box-shadow: 0px 0px 12px 2px #0080ff29;
+    }
+
+}
+
+select,
+textarea {
+    outline: none;
+    padding: 8px;
+    border-radius: 10px;
+    // border: none;
+    border: 2px solid rgb(219, 219, 219);
+    // background: #9dd3ff69;
+    background: v.$blanco;
+    width: 100%;
+
+    &:focus {
+        border: 2px solid #2593ea;
+        box-shadow: 0px 0px 12px 2px #0080ff29;
+    }
+
+}
+
+.form-group label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    // transition: 0.3s;
+    pointer-events: none;
+    font-size: 16px;
+    color: v.$color-nav;
+}
+
+.form-group {
+    width: auto;
+    position: relative;
+
+    select+label {
+        top: -15px;
+        left: 5px;
+        font-size: 12px;
+        color: #333;
+    }
+}
+
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+    transition: 0.1s ease-in-out;
+    transition-delay: 0.3s;
+    top: -15px;
+    left: 0px;
+    font-size: 12px;
+    color: #333;
+}
+
+.form-group textarea:focus+label,
+.form-group textarea:not(:placeholder-shown)+label {
+    transition: 0.1s ease-in-out;
+    transition-delay: 0.3s;
+    top: -15px;
+    left: 0px;
+    font-size: 12px;
+    color: #333;
+}
+
+.app .form-group input[type=file] {
+    padding: 3px 10px;
+}
+
+
+.input-disabled {
+    color: #9d9d9d;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+// Exclusivo LOGIN 
+.labelImportant::after {
+    content: " *";
+    color: v.$rojo-fuerte;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}

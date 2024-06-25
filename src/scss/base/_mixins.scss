@@ -1,0 +1,386 @@
+@use 'variables' as v;
+
+// /** Media Queries **/
+@mixin telefono {
+    @media (max-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+
+#contenedor {
+    z-index: 1;
+}
+
+.contenedor--sm,
+.contenedor--md,
+.contenedor--lg,
+.contenedor--xl,
+.contenedor--xxl {
+    // box-shadow: 0 14px 26px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 2px 0 rgba(120, 217, 255, 0.486), 0 3px 1px -2px rgba(4, 59, 161, 0.12), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    background-color: #fff;
+    border-radius: 10px;
+
+    @include telefono {
+        margin: 1rem !important;
+    }
+
+    @include tablet {
+        margin: 1rem !important;
+    }
+}
+
+.contenedor--sm {
+    width: 54rem;
+}
+
+.contenedor--md {
+    width: 72rem;
+}
+
+.contenedor--lg {
+    width: 96rem;
+}
+
+.contenedor--xl {
+    width: 120rem;
+}
+
+.contenedor--xxl {
+    width: 140rem;
+}
+
+// Titulo de secciones
+.flex-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: v.$color-nav;
+    color: v.$blanco;
+    padding: .5rem 1rem;
+}
+
+/* Sistemas de Columnas */
+
+
+/* Sistemas de Columnas */
+
+
+/* Sistemas de Columnas */
+.row {
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* Sistemas de Columnas */
+
+.w-100 {
+    width: 100%;
+}
+
+/* Alineacion */
+.txt-left {
+    text-align: left;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-center {
+    text-align: center;
+    justify-content: center;
+}
+
+// centrar horizontalmente y verticalmente contenedor
+.center-hv {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin: 0 auto
+}
+
+.center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+// MARGENES
+.m-0 {
+    margin: 0;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 2rem;
+}
+
+.m-3 {
+    margin: 3rem;
+}
+
+/* margin top y bottom */
+.m-tb1 {
+    margin: .5rem 0;
+}
+
+.m-tb2 {
+    margin: 1rem 0;
+}
+
+.m-tb3 {
+    margin: 1.5rem 0;
+}
+
+.m-left1 {
+    margin-left: 1rem;
+}
+
+.m-left2 {
+    margin-left: 2rem;
+}
+
+.m-left3 {
+    margin-left: 3rem;
+}
+
+.m-right1 {
+    margin-right: 1rem;
+}
+
+.m-right2 {
+    margin-right: 2rem;
+}
+
+.m-right3 {
+    margin-right: 3rem;
+}
+
+.m-rl3 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.m-t1 {
+    margin-top: 1rem;
+}
+
+.m-t2 {
+    margin-top: 2rem;
+}
+
+.m-t3 {
+    margin-top: 3rem;
+}
+
+.m-t5 {
+    margin-top: 5rem;
+}
+
+.m-b1 {
+    margin-bottom: 1rem;
+}
+
+.m-b2 {
+    margin-bottom: 2rem;
+}
+
+.m-b3 {
+    margin-bottom: 3rem;
+}
+
+.m-b5 {
+    margin-bottom: 5rem;
+}
+
+// Paddings
+.p-tb1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+// Alto 100VH
+.vh-100 {
+    height: 100vh;
+}
+
+// Ocultos
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+}
+
+.ocultar {
+    display: none;
+    visibility: hidden;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+// clases flex
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.centrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.js-sb {
+    justify-content: space-between;
+}
+
+// Lineas
+.hr_separador {
+    width: 100%;
+    border: 1px solid #42516c;
+}
+
+.hr_bloque {
+    margin: 1.5rem 0;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgb(255 255 255), rgb(187 187 187), rgb(22 21 21 / 0%));
+}
+
+.hr-line {
+    margin: 1rem 0;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgb(255 255 255), rgb(187 187 187), rgb(22 21 21 / 0%));
+}
+
+// Centrar el titulo de una columna
+.txt-center .ag-header-cell-label {
+    justify-content: center;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+// Estilos Alertas
+
+.swalTitle {
+    width: 60rem;
+    border-radius: 1rem;
+
+    .swal2-title {
+        background-color: v.$color-barra;
+        text-align: center;
+        padding: 8px 1rem;
+        color: #fff;
+    }
+}
+
+.event-none {
+    pointer-events: none;
+}
+
+.disabled-element {
+    // color: v.$color-line;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.red {
+    background-color: red;
+}
+
+.tl-azul {
+    color: v.$azul-oscuro;
+}
