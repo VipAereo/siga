@@ -9,12 +9,13 @@ class DashboardController
 
     public static function obtenerMenu()
     {
+        debuguear($_SESSION);
+
         // proteger vista 
         if (!isAuth()) {
             header('Location: /login');
         }
 
-        debuguear($_SESSION);
 
         $userId = $_SESSION['id'];
         $usuarios = MegaMenu::traerMenu($userId);

@@ -26,7 +26,6 @@ use Controllers\PasajeroController;
 use Controllers\CostearController;
 use Controllers\ProductoController;
 use Controllers\ServicioController;
-use Model\Categoria;
 
 $router = new Router();
 
