@@ -618,6 +618,8 @@ class ActiveRecord
 
     public static function  traerMenu($userId)
     {
+        $tabla = strtolower(static::$tabla); // Convertir el nombre de la tabla a minúsculas
+
         $query = "
             WITH RECURSIVE ProgramasUsuarioCte AS (
                 SELECT 
@@ -630,7 +632,7 @@ class ActiveRecord
                 FROM 
                 relproguser AS rpu
                 INNER JOIN 
-                " . static::$tabla . " AS p ON rpu.programa_id = p.programa_id
+                " . $tabla . " AS p ON rpu.programa_id = p.programa_id
                 WHERE 
                 rpu.usuario_id = " . $userId . "
                 UNION ALL
@@ -642,34 +644,34 @@ class ActiveRecord
                 p.nivel AS Nivel,
                 p.ruta AS Ruta
                 FROM 
-                " . static::$tabla . " AS p
+                " . $tabla . " AS p
                 INNER JOIN 
                 ProgramasUsuarioCte AS pu ON p.programa_id = pu.PadreId
             ),
             ProgramasRolesUsuarioCte AS (
                 SELECT 
-                (SELECT rol_id FROM Usuarios WHERE usuario_id = " . $userId . ") AS id,  -- Aquí especifica el ID del usuario
+                (SELECT rol_id FROM usuarios WHERE usuario_id = " . $userId . ") AS id,  -- Aquí especifica el ID del usuario
                 rpr.programa_id AS MenuId,
                 p.nombre AS nombre,
                 p.padre AS PadreId,
                 p.nivel AS Nivel,
                 p.ruta AS Ruta
                 FROM 
-                RelProgRol AS rpr
+                relprogrol AS rpr
                 INNER JOIN 
-                " . static::$tabla . " AS p ON rpr.programa_id = p.programa_id
+                " . $tabla . " AS p ON rpr.programa_id = p.programa_id
                 WHERE 
-                rpr.rol_id = (SELECT rol_id FROM Usuarios WHERE usuario_id = " . $userId . ")
+                rpr.rol_id = (SELECT rol_id FROM usuarios WHERE usuario_id = " . $userId . ")
                 UNION ALL
                 SELECT 
-                (SELECT rol_id FROM Usuarios WHERE usuario_id = " . $userId . ") AS id,  -- Aquí especifica el ID del usuario
+                (SELECT rol_id FROM usuarios WHERE usuario_id = " . $userId . ") AS id,  -- Aquí especifica el ID del usuario
                 p.programa_id AS MenuId,
                 p.nombre AS nombre,
                 p.padre AS PadreId,
                 p.nivel AS Nivel,
                 p.ruta AS Ruta
                 FROM 
-                " . static::$tabla . " AS p
+                " . $tabla . " AS p
                 INNER JOIN 
                 ProgramasRolesUsuarioCte AS pruc ON p.programa_id = pruc.PadreId
             )
