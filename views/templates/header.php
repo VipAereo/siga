@@ -1,6 +1,6 @@
 <header class="header center js-sb">
     <div class="header_logo m-left2 ">
-        <a href="/dashboard"></a>
+        <a href="/"></a>
     </div>
     <div class="header_cuenta m-right2 row">
         <div class="header_perfil col4 m-tb1">
@@ -41,16 +41,9 @@
 </nav>
 <!-- Responsive BURGER -->
 
-
-
-
 <nav class="navigation ">
     <ul class="navigation_list flex "></ul>
 </nav>
-
-
-
-
 
 <div class="secciones"></div>
 

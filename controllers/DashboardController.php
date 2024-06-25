@@ -14,9 +14,10 @@ class DashboardController
             header('Location: /login');
         }
         $userId = $_SESSION['id'];
-        $usuarios = MegaMenu::traerMenu($userId);
-
-        echo json_encode($usuarios);
+        if($userId){
+            $usuarios = MegaMenu::traerMenu($userId);
+            echo json_encode($usuarios);
+        }
     }
 
     public static function ruta(){
