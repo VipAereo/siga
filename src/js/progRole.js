@@ -188,7 +188,7 @@ async function crearRelacion(datosInsertar) {
         datos.append('rol_id', rol_id);
         datos.append('datosInsertar', JSON.stringify(datosInsertar));
 
-        const respuesta = await fetch('crear/progRoles', {
+        const respuesta = await fetch('crear/progroles', {
             method: 'POST',
             body: datos
         });
