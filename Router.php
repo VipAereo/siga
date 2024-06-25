@@ -3,7 +3,7 @@
 namespace MVC;
 
 class Router
-{  
+{
     // necesitamos pasarlo como objeto
     public array $getRoutes = [];
     public array $postRoutes = [];

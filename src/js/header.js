@@ -114,7 +114,8 @@ async function crearMenu(menu) {
     // $(".navigation_list").empty();
     // document.querySelector('.secciones').innerHTML = '';
 
-    rutaServer = await obtenerRuta();
+    // rutaServer = await obtenerRuta();
+    rutaServer = location.origin;
 
     for (i in menu) {
         if (menu[i]['PadreId'] == null) {
