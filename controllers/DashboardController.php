@@ -10,14 +10,6 @@ class DashboardController
     public static function obtenerMenu()
     {
 
-        if(!isAuth()){
-            debuguear('NEGACION');
-        } else {
-            debuguear('AFIRMACION');
-        }
-
-
-        debuguear(!isAuth());
         // proteger vista 
         if (!isAuth()) {
             header('Location: /login');
