@@ -35,7 +35,7 @@ $router = new Router();
 $router->get('/login', [AuthController::class, 'login']);
 $router->post('/logeo', [AuthController::class, 'entrar']);
 $router->get('/logout', [AuthController::class, 'logout']);
-$router->get('/dashboard', [AuthController::class, 'index']);
+$router->get('/', [AuthController::class, 'index']);
 
 /* INTRANET */
 $router->get('/obtener/menu', [DashboardController::class, 'obtenerMenu']);

@@ -14,7 +14,7 @@ class AuthController
     {
         // si ya inicio sesion
         if (isAuth()) {
-            header('Location: /dashboard');
+            header('Location: /login');
         }
 
         // validar que tenga permiso en la ruta actual

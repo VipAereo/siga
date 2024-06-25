@@ -60,7 +60,7 @@ async function iniciarSesion() {
 
         if (data.exito == 1) {
             // aqui falta la ruta Server 
-            window.location.href = 'dashboard';
+            window.location.href = '/';
         }
 
         if (data.userNoExist) {
