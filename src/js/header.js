@@ -43,15 +43,12 @@ window.addEventListener('resize', function () {
 });
 
 async function iniciarApp() {
-    console.log('iniciarAPp');
     await obtenerDatos();
     await tabs(); 
 }
 
 
 async function obtenerDatos() {
-
-    console.log('fetch');
 
     // obtener datos de la BD 
     try {
