@@ -58,7 +58,6 @@
     // $url_actual = $_SERVER['PATH_INFO'] ?? '/';
     $url_actual = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
 
-    debuguear($url_actual);
     if ($url_actual != '/login') include_once __DIR__ . '/templates/header.php';
 
     ?>
