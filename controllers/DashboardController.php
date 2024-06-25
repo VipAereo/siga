@@ -10,13 +10,13 @@ class DashboardController
     public static function obtenerMenu()
     {
         // proteger vista 
-        if (!isAuth()) {
-            header('Location: /login');
-        }
+        // if (!isAuth()) {
+        //     header('Location: /login');
+        // }
 
-        $userId = $_SESSION['id'];
-        $usuarios = MegaMenu::traerMenu($userId);
-        echo json_encode($usuarios);
+        // $userId = $_SESSION['id'];
+        // $usuarios = MegaMenu::traerMenu($userId);
+        // echo json_encode($usuarios);
     }
 
     public static function ruta()
