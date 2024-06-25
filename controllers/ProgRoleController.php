@@ -170,8 +170,8 @@ class ProgRoleController
                     $respuesta['alertas']  = $alertas;
                 }
                 if (empty($alertas)) {
-                    $resultado =  $program->guardar();
                     var_dump($program);
+                    $resultado =  $program->guardar();
                     debuguear($resultado);
 
                     if ($resultado['error']) {
