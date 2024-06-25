@@ -690,6 +690,7 @@ class ActiveRecord
                 ORDER BY
              MenuId ASC; 
         ";
+        debuguear($query);
         $resultado = static::$db->prepare($query);
 
         if ($resultado->execute()) {
