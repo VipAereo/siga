@@ -138,9 +138,9 @@ class AuthController
             header('Location: /login');
         }
 
-        // $router->render('admin/dashboard/index', [
-        //     'titulo' => "Iniciar",
-        // ]);
+        $router->render('admin/dashboard/index', [
+            'titulo' => "Iniciar",
+        ]);
     }
     public static function logout()
     {
